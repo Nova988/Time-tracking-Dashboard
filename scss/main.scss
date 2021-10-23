@@ -4,51 +4,56 @@
 // Dashboard layout
 #dashboard {
   display: grid;
-  gap: 1rem;
   grid-template-areas:
     "head work play study"
     "head exercise social selfcare";
+  grid-template-columns: repeat(4, minmax(100px, 225px));
+  grid-template-rows: auto auto;
+  gap: 1rem;
 
   .header {
     grid-area: head;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: $darkBlue;
   }
 
   .work {
     grid-area: work;
+    background: $work;
   }
 
   .play {
     grid-area: play;
+    background: $play;
   }
 
   .study {
     grid-area: study;
+    background: $study;
   }
 
   .exercise {
     grid-area: exercise;
+    background: $exercise;
   }
 
   .social {
     grid-area: social;
+    background: $social;
   }
 
   .self-care {
     grid-area: selfcare;
+    background: $selfCare;
   }
 }
 
 // Dashboard header
-.header {
-  border-radius: 1rem;
-  overflow: hidden;
-  background: $darkBlue;
-}
-
 .dash-information {
   background: $blue;
   text-align: left;
-  padding: 1.5rem 0 1.5rem 2rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
   border-radius: 1rem;
 
   img {
@@ -61,10 +66,6 @@
   p {
     padding-top: 2rem;
     color: $paleblue;
-  }
-
-  h1 {
-    width: 50%;
   }
 }
 
@@ -86,22 +87,99 @@
     background: none;
     border: none;
     cursor: pointer;
+    transition: $hoverTransition;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }
 
 // Dashboard sections
 .dash-section {
-  min-width: 250px;
+  position: relative;
   display: flex;
   align-items: flex-end;
-  background: red;
-  overflow: hidden;
   border-radius: 1rem;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    width: 60px;
+  }
 
   .section-info {
+    position: relative;
+    text-align: left;
     width: 100%;
-    height: 80%;
+    height: 85%;
+    padding: 2rem 1.5rem;
     background: $darkBlue;
     border-radius: 1rem 1rem 0 0;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .meatball-menu {
+    position: relative;
+    height: 40px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 2px;
+    z-index: 3;
+
+    &:hover .dot {
+      background-color: #fff;
+    }
+
+    &:hover .section-info {
+      opacity: 1;
+    }
+
+    .dot {
+      height: 5px;
+      width: 5px;
+      background-color: $paleblue;
+      border-radius: 50%;
+    }
+  }
+}
+
+.current-time {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.prev-time {
+  color: $desaturatedBlue;
+  font-size: 0.7rem;
+}
+
+.daily {
+  display: block;
+}
+.weekly {
+  display: none;
+}
+.monthly {
+  display: none;
 }
