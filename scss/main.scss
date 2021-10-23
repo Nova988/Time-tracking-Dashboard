@@ -1,0 +1,107 @@
+@import "variables";
+@import "main-styles";
+
+// Dashboard layout
+#dashboard {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "head work play study"
+    "head exercise social selfcare";
+
+  .header {
+    grid-area: head;
+  }
+
+  .work {
+    grid-area: work;
+  }
+
+  .play {
+    grid-area: play;
+  }
+
+  .study {
+    grid-area: study;
+  }
+
+  .exercise {
+    grid-area: exercise;
+  }
+
+  .social {
+    grid-area: social;
+  }
+
+  .self-care {
+    grid-area: selfcare;
+  }
+}
+
+// Dashboard header
+.header {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: $darkBlue;
+}
+
+.dash-information {
+  background: $blue;
+  text-align: left;
+  padding: 1.5rem 0 1.5rem 2rem;
+  border-radius: 1rem;
+
+  img {
+    width: 75px;
+    border: #fff 3px solid;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  p {
+    padding-top: 2rem;
+    color: $paleblue;
+  }
+
+  h1 {
+    width: 50%;
+  }
+}
+
+.dash-nav {
+  text-align: left;
+  padding: 1.5rem 0 1.5rem 2rem;
+
+  li {
+    padding-bottom: 1rem;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
+  .btn {
+    font-size: 1rem;
+    color: $desaturatedBlue;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+// Dashboard sections
+.dash-section {
+  min-width: 250px;
+  display: flex;
+  align-items: flex-end;
+  background: red;
+  overflow: hidden;
+  border-radius: 1rem;
+
+  .section-info {
+    width: 100%;
+    height: 80%;
+    background: $darkBlue;
+    border-radius: 1rem 1rem 0 0;
+  }
+}

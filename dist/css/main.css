@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  background: #0f1424;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  height: 100vh;
+  color: #fff; }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%; }
+
+h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  padding-bottom: 1rem; }
+
+ul {
+  list-style: none; }
+
+.container {
+  max-width: 1200px;
+  min-height: 100%;
+  margin: auto;
+  padding: 50px 25px 20px 25px;
+  text-align: center; }
+
+.grid-container {
+  display: grid; }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.hide {
+  display: none; }
+
+#dashboard {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "head work play study" "head exercise social selfcare"; }
+  #dashboard .header {
+    grid-area: head; }
+  #dashboard .work {
+    grid-area: work; }
+  #dashboard .play {
+    grid-area: play; }
+  #dashboard .study {
+    grid-area: study; }
+  #dashboard .exercise {
+    grid-area: exercise; }
+  #dashboard .social {
+    grid-area: social; }
+  #dashboard .self-care {
+    grid-area: selfcare; }
+
+.header {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #1c1f4a; }
+
+.dash-information {
+  background: #5847eb;
+  text-align: left;
+  padding: 1.5rem 0 1.5rem 2rem;
+  border-radius: 1rem; }
+  .dash-information img {
+    width: 75px;
+    border: #fff 3px solid;
+    border-radius: 50%;
+    overflow: hidden; }
+  .dash-information p {
+    padding-top: 2rem;
+    color: #bdc1ff; }
+  .dash-information h1 {
+    width: 50%; }
+
+.dash-nav {
+  text-align: left;
+  padding: 1.5rem 0 1.5rem 2rem; }
+  .dash-nav li {
+    padding-bottom: 1rem; }
+    .dash-nav li:last-of-type {
+      padding-bottom: 0; }
+  .dash-nav .btn {
+    font-size: 1rem;
+    color: #6f76c8;
+    background: none;
+    border: none;
+    cursor: pointer; }
+
+.dash-section {
+  min-width: 250px;
+  display: flex;
+  align-items: flex-end;
+  background: red;
+  overflow: hidden;
+  border-radius: 1rem; }
+  .dash-section .section-info {
+    width: 100%;
+    height: 80%;
+    background: #1c1f4a;
+    border-radius: 1rem 1rem 0 0; }

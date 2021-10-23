@@ -1,0 +1,14 @@
+{
+  "name": "time-tracking-dashboard-main",
+  "version": "1.0.0",
+  "description": "Time Tracking dashboard challenge on frontendmentor.io",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --w scss/main.scss -o dist/css/ --recrutive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

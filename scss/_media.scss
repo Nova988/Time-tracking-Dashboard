@@ -1,0 +1,43 @@
+@media screen and (max-width: 1025px) {
+  #main-header {
+    width: 75%;
+  }
+
+  .illustration {
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #form {
+    flex-direction: column;
+
+    .btn {
+      align-self: center;
+      width: 100%;
+    }
+  }
+
+  .error-msg {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .sub-header {
+    font-size: 0.8rem;
+  }
+
+  #main-header {
+    width: 100%;
+  }
+
+  .illustration {
+    max-width: 100%;
+    padding-top: 0;
+  }
+}
