@@ -80,18 +80,18 @@
       padding-bottom: 0;
     }
   }
+}
 
-  .btn {
-    font-size: 1rem;
-    color: $desaturatedBlue;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: $hoverTransition;
+.btn {
+  font-size: 1rem;
+  color: $desaturatedBlue;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: $hoverTransition;
 
-    &:hover {
-      color: #fff;
-    }
+  &:hover {
+    color: #fff;
   }
 }
 
@@ -164,6 +164,8 @@
   }
 }
 
+// Operations dashboard
+
 .current-time {
   font-size: 2.5rem;
   font-weight: 300;
@@ -174,12 +176,16 @@
   font-size: 0.7rem;
 }
 
-.daily {
+.timeframe {
+  display: none;
+}
+
+// Javascript classes
+
+.timeframe--active {
   display: block;
 }
-.weekly {
-  display: none;
-}
-.monthly {
-  display: none;
+
+.btn--active {
+  color: #fff;
 }

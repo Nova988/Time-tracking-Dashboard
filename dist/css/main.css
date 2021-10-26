@@ -96,15 +96,16 @@ ul {
     padding-bottom: 1rem; }
     .dash-nav li:last-of-type {
       padding-bottom: 0; }
-  .dash-nav .btn {
-    font-size: 1rem;
-    color: #6f76c8;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: all 300ms ease; }
-    .dash-nav .btn:hover {
-      color: #fff; }
+
+.btn {
+  font-size: 1rem;
+  color: #6f76c8;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease; }
+  .btn:hover {
+    color: #fff; }
 
 .dash-section {
   position: relative;
@@ -164,11 +165,11 @@ ul {
   color: #6f76c8;
   font-size: 0.7rem; }
 
-.daily {
+.timeframe {
+  display: none; }
+
+.timeframe--active {
   display: block; }
 
-.weekly {
-  display: none; }
-
-.monthly {
-  display: none; }
+.btn--active {
+  color: #fff; }
