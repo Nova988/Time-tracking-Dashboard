@@ -76,12 +76,15 @@ ul {
     background: #f1c65b; }
 
 .dash-information {
+  display: flex;
+  flex-direction: column;
   background: #5847eb;
   text-align: left;
   padding: 1.5rem 2rem 1.5rem 2rem;
   border-radius: 1rem; }
   .dash-information img {
-    width: 75px;
+    max-width: 75px;
+    max-height: 75px;
     border: #fff 3px solid;
     border-radius: 50%;
     overflow: hidden; }
@@ -91,7 +94,10 @@ ul {
 
 .dash-nav {
   text-align: left;
-  padding: 1.5rem 0 1.5rem 2rem; }
+  padding: 1.5rem 2rem 1.5rem 2rem; }
+  .dash-nav ul {
+    display: flex;
+    flex-direction: column; }
   .dash-nav li {
     padding-bottom: 1rem; }
     .dash-nav li:last-of-type {
@@ -123,7 +129,7 @@ ul {
     text-align: left;
     width: 100%;
     height: 85%;
-    padding: 2rem 1.5rem;
+    padding: 1rem 1.5rem 2rem 1.5rem;
     background: #1c1f4a;
     border-radius: 1rem 1rem 0 0;
     cursor: pointer;
@@ -173,3 +179,49 @@ ul {
 
 .btn--active {
   color: #fff; }
+
+@media screen and (max-width: 769px) {
+  h1 {
+    font-size: 1.5rem; }
+  #dashboard {
+    grid-template-areas: "head" "work" "play" "study" "exercise" "social" "selfcare";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; }
+  .dash-information {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    .dash-information img {
+      height: 75px; }
+    .dash-information > div {
+      padding-left: 1rem; }
+      .dash-information > div h1 {
+        padding-bottom: 0; }
+    .dash-information p {
+      padding-top: 0; }
+  .dash-nav ul {
+    flex-direction: row;
+    justify-content: space-between; }
+  .dash-nav li {
+    padding-bottom: 0; }
+  .dash-section .section-info {
+    padding-bottom: 3rem; }
+  .timeframes-all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .prev-time {
+    padding-left: 1rem; }
+  .info-header {
+    padding-bottom: 0; } }
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 1rem; }
+  .dash-information img {
+    width: 60px;
+    height: 60px; }
+  .dash-information p {
+    font-size: 0.8rem; }
+  .current-time {
+    font-size: 2rem; } }

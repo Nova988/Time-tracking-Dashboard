@@ -51,13 +51,16 @@
 
 // Dashboard header
 .dash-information {
+  display: flex;
+  flex-direction: column;
   background: $blue;
   text-align: left;
   padding: 1.5rem 2rem 1.5rem 2rem;
   border-radius: 1rem;
 
   img {
-    width: 75px;
+    max-width: 75px;
+    max-height: 75px;
     border: #fff 3px solid;
     border-radius: 50%;
     overflow: hidden;
@@ -71,7 +74,12 @@
 
 .dash-nav {
   text-align: left;
-  padding: 1.5rem 0 1.5rem 2rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
 
   li {
     padding-bottom: 1rem;
@@ -115,7 +123,7 @@
     text-align: left;
     width: 100%;
     height: 85%;
-    padding: 2rem 1.5rem;
+    padding: 1rem 1.5rem 2rem 1.5rem;
     background: $darkBlue;
     border-radius: 1rem 1rem 0 0;
     cursor: pointer;
@@ -189,3 +197,5 @@
 .btn--active {
   color: #fff;
 }
+
+@import "media";
